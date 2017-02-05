@@ -42,6 +42,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        body {
+            min-width: 600px;
+        }
+
         a,
         a:visited,
         a:hover,
@@ -133,6 +137,12 @@
             background-color: rgb(92, 195, 245);
         }
 
+        @media (max-width: 1400px) {
+            .page-header__image__cloud {
+                display: none;
+            }
+        }
+
         .rozvijime {
             display: flex;
             justify-content: flex-start;
@@ -159,6 +169,16 @@
             justify-content: center;
         }
 
+        @media (max-width: 900px) {
+            .rozvijime {
+                height: 700px;
+            }
+
+            .grass {
+                display: none;
+            }
+        }
+
         .button-objednat {
             background-color: rgb(247,114,6);
             display: block;
@@ -172,7 +192,18 @@
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            
+            height: 250px;
+        }
+
+        .rozvijime__header__image {
+            width: 217px;
+            text-align: right;
+        }
+
+        @media (max-width: 1600px) {
+            .rozvijime__header__image {
+                display: none;
+            }
         }
 
         .rozvijime__header__title {
@@ -181,11 +212,34 @@
             justify-content: center;
             align-items: center;
             padding-top: 30px;
-            width: 1100px;
+            width: 1010px;
         }
 
-        .rozvijime__header__title h1 {
+        .rozvijime__header__subtitle {
+            text-align: center;
+        }
+
+        @media (min-width: 1100px) {
+            .rozvijime__header__title__break {
+                display: none;
+            }
+        }
+
+        @media (min-width: 800px) {
+            .rozvijime__header__subtitle__break {
+                display: none;
+            }
+        }
+
+        @media (max-width: 800px) {
+            .rozvijime__header__subtitle {
+                margin-bottom: 10px;
+            }
+        }
+
+        .rozvijime__header__title__text {
             font-size: 30pt;
+            line-height: 36pt;
             text-align: center;
             padding-bottom: 30px;
         }
@@ -232,28 +286,53 @@
         }
 
         .relative.girl {
-            right: 30px;
+            position: absolute;
+            left: calc(50% + 180px);
             bottom: 130px;
         }
 
         .relative.paint {
-            left: 310px;
+            position: absolute;
+            left: calc(50% + 400px);
             bottom: 190px;
         }
 
         .relative.bobo {
-            left: 160px;
+            position: absolute;
+            left: calc(50% + 600px);
             bottom: 220px;
         }
 
         .relative.boy {
-            right: 360px;
+            position: absolute;
+            left: calc(50% - 440px);
             bottom: 130px;
         }
 
         .relative.castle {
-            right: 210px;
+            position: absolute;
+            left: calc(50% - 910px);
             bottom: 200px;
+        }
+
+        @media (max-width: 1800px) {
+            .relative.bobo,
+            .relative.castle {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .relative.paint {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .relative.girl,
+            .relative.boy {
+                display: none;
+            }
         }
 
         .ficury {
@@ -290,6 +369,25 @@
 
         .product-description.usetrite {
             border-color: transparent;
+        }
+        
+        @media (max-width: 1400px) {
+            .product-description {
+                flex-direction: column;
+                height: 900px;
+            }
+
+            .product-description.right .text-box,
+            .product-description.left .text-box {
+                margin-left: 0;
+                margin-right: 0;
+                order: 2 !important;
+                margin-top: 50px;
+            }
+
+            .product-description.usetrite {
+                padding-bottom: 0;
+            }
         }
 
         .product-text {
@@ -370,13 +468,25 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 700px;
+            height: 750px;
         }
 
         .jakto__content {
             display: flex;
             flex-direction: row;
             justify-content: center;
+        }
+
+        @media (max-width: 1400px) {
+            .jakto {
+                height: auto;
+            }
+
+            .jakto__content {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
         }
 
         .jakto__title {
@@ -516,12 +626,54 @@
             left: calc(50% + 360px);
         }
 
+        @media (max-width: 1600px) {
+            .objednavka__content__bobo {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .objednavka__content__bobo {
+                display: inline;
+                top: 1025px;
+                left: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 800px) {
+            .objednavka__content__bobo {
+                display: none;
+            }
+        }
+
         .objednavka__types {
             display: flex;
             flex-direction: row;
             justify-content: center;
             align-items: center;
             margin-top: -90px;
+        }
+
+        @media (min-width: 1200px) {
+            .objednavka__type {
+                margin: 0 15px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .objednavka__content {
+                height: auto;
+            }
+
+            .objednavka__types {
+                margin-top: -180px;
+                flex-direction: column;
+            }
+
+            .objednavka__type {
+                margin-top: 100px;
+                margin-bottom: 50px;
+            }
         }
 
         .objednavka__type {
@@ -533,7 +685,7 @@
             background-color: white;
             width: 370px;
             height: 440px;
-            margin: 0 15px;
+            
             border-radius: 40px;
             text-align: center;            
         }
@@ -628,6 +780,20 @@
             align-items: center;
         }
 
+         @media (max-width: 1200px) {
+            .objednavka__recomend__title {
+                margin-top: 70px;
+            }
+
+            .objednavka__reviews {
+                flex-direction: column;
+            }
+
+            .objednavka__reviews .objednavka__review {
+                margin: 30px 15px;
+            }
+         }
+
         .objednavka__review {
             width: 370px;
             height: 210px;
@@ -666,7 +832,6 @@
         .objednavka__download {
             width: 924px;
             height: 524px;
-            margin-top: -224px;
             background-color: white;
             border-radius: 30px;
             display: flex;
@@ -675,6 +840,31 @@
             align-items: center;
             text-align: center;
             z-index: 3;
+        }
+
+        @media (min-width: 1200px) {
+            .objednavka__download {
+                margin-top: -224px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .objednavka__download {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .objednavka__download {
+                margin-top: 0;
+                border-radius: 0px;
+                width: 100%;
+                padding-bottom: 50px;
+            }
+
+            .objednavka__inspire__arrow {
+                display: none;
+            }
         }
 
         .objednavka__download__title {
@@ -749,13 +939,28 @@
             box-shadow: black 4px 4px 10px -6px;
         }
 
+        @media (min-width: 1000px) {
+            .objednavka__inspire__button.youtube {
+                margin-left: 280px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .objednavka__inspire__buttons {
+                flex-direction: column;
+            }
+
+            .objednavka__inspire__button.youtube {
+                margin-top: 50px;
+            }
+        }
+
         .objednavka__inspire__button.facebook {
             background-color: rgb(7, 93, 153);
         }
 
         .objednavka__inspire__button.youtube {
             background-color: rgb(184, 44, 47);
-            margin-left: 280px;
         }
 
         .objednavka__inspire__button__text {
@@ -812,6 +1017,36 @@
             left: calc(50% + 510px);
         }
 
+        @media (max-width: 1800px) {
+            .objednavka__footer__img.cat-grass {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1500px) {
+            .objednavka__footer__img.left-tree {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1400px) {
+            .objednavka__footer__img.right-tree {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1300px) {
+            .objednavka__footer__img.squirrel {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .objednavka__footer__img.left-grass {
+                display: none;
+            }
+        }
+
         .kdozatim {
             display: flex;
             flex-direction: column;
@@ -860,6 +1095,21 @@
         .kdozatim__arrows {
             position: relative;
             width: 100%;
+        }
+
+        .kdozatim__avatars__box {
+            display: flex;
+            flex-direction: row;
+        }
+
+        @media (max-width: 1000px) {
+            .kdozatim__arrows {
+                display: none;
+            }
+
+            .kdozatim__avatars {
+                flex-direction: column;
+            }
         }
 
         .kdozatim__arrow {
@@ -939,19 +1189,23 @@
   <body>
     <main class="page-content">
         <header class="page-header">
-            <img src="public/img/header/cloud_left.png" alt="Levý mráček">
+            <img class="page-header__image__cloud" src="public/img/header/cloud_left.png" alt="Levý mráček">
             <img src="public/img/header/box.png" alt="Bobobox box">
-            <img src="public/img/header/cloud_right.png" alt="Pravý mráček">
+            <img class="page-header__image__cloud" src="public/img/header/cloud_right.png" alt="Pravý mráček">
         </header>
         <section class="rozvijime">
             <header class="rozvijime__header">
-                <img src="public/img/header/balon.png" alt="Létající balón">
+                <figure class="rozvijime__header__image">
+                    <img src="public/img/header/balon.png" alt="Létající balón">
+                </figure>
                 <div class="rozvijime__header__title">
-                    <h1>Rozvíjíme vaše děti hrou, bez námahy každý měsíc</h1>
-                    <h3>Bobobox je <span class="strong">výtvarná krabice</span> pro děti od 4-8 let.</h3>
-                    <h3>Funguje jako <span class="strong">flexibilní předplatné</span> nebo jako dárek.</h3>
+                    <h1 class="rozvijime__header__title__text">Rozvíjíme vaše děti hrou,<br class="rozvijime__header__title__break"> bez námahy každý měsíc</h1>
+                    <h3 class="rozvijime__header__subtitle">Bobobox je <span class="strong">výtvarná krabice</span><br class="rozvijime__header__subtitle__break"> pro děti od 4-8 let.</h3>
+                    <h3 class="rozvijime__header__subtitle">Funguje jako <span class="strong">flexibilní předplatné</span><br class="rozvijime__header__subtitle__break"> nebo jako dárek.</h3>
                 </div>
-                <img src="public/img/header/raketa.png" alt="Raketa">
+                <figure class="rozvijime__header__image">
+                    <img src="public/img/header/raketa.png" alt="Raketa">
+                </figure>
             </header>
             <div class="prehrat-video">
                 <a href="" class="prehrat-video__link">
@@ -1120,7 +1374,7 @@
                         </div>
                         <a href="" class="objednavka__vybrat overlay">Vybrat</a>
                     </div>
-                    <div class="objednavka__type">
+                    <div class="objednavka__type last">
                         <div>
                             <h1 class="objednavka__type__title">Předplatné 5 boxů<br>+ 1 box zdarma</h1>
                             <img src="public/img/pricing/box_6.png" alt="5 1 boxů">
@@ -1208,22 +1462,26 @@
             <h1 class="kdozatim__title">Kdo za tím stojí?</h1>
             <h5 class="kdozatim__subtitle">Vyrobeno a navrženo s &hearts; v Brně</h5>
             <div class="kdozatim__avatars">
-                <figure class="kdozatim__avatar">
-                    <img src="public/img/footer/renca_foto.png" alt="Avatar - Renata">
-                    <figcaption class="kdozatim__avatar__caption">Renata</figcaption>
-                </figure>
-                <figure class="kdozatim__avatar">
-                    <img src="public/img/footer/tom_foto.png" alt="Avatar - Tom">
-                    <figcaption class="kdozatim__avatar__caption">Tom</figcaption>
-                </figure>
-                <figure class="kdozatim__avatar">
-                    <img src="public/img/footer/lada_foto.png" alt="Avatar - Láďa">
-                    <figcaption class="kdozatim__avatar__caption">Láďa</figcaption>
-                </figure>
-                <figure class="kdozatim__avatar">
-                    <img src="public/img/footer/bobo_foto.png" alt="Avatar - Bobo">
-                    <figcaption class="kdozatim__avatar__caption">Bobo</figcaption>
-                </figure>
+                <div class="kdozatim__avatars__box">
+                    <figure class="kdozatim__avatar">
+                        <img src="public/img/footer/renca_foto.png" alt="Avatar - Renata">
+                        <figcaption class="kdozatim__avatar__caption">Renata</figcaption>
+                    </figure>
+                    <figure class="kdozatim__avatar">
+                        <img src="public/img/footer/tom_foto.png" alt="Avatar - Tom">
+                        <figcaption class="kdozatim__avatar__caption">Tom</figcaption>
+                    </figure>
+                </div>
+                <div class="kdozatim__avatars__box">
+                    <figure class="kdozatim__avatar">
+                        <img src="public/img/footer/lada_foto.png" alt="Avatar - Láďa">
+                        <figcaption class="kdozatim__avatar__caption">Láďa</figcaption>
+                    </figure>
+                    <figure class="kdozatim__avatar">
+                        <img src="public/img/footer/bobo_foto.png" alt="Avatar - Bobo">
+                        <figcaption class="kdozatim__avatar__caption">Bobo</figcaption>
+                    </figure>
+                </div>
             </div>
             <div class="kdozatim__arrows">
                 <img class="kdozatim__arrow first" src="public/img/footer/arrow_long.png" alt="Šipka">
