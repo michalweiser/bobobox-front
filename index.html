@@ -337,18 +337,31 @@
 
         .ficury {
             height: 660px;
-            background-image: url('public/img/header/ficury_background.png');
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
 
+        .ficury__background {
+            width: 100%;
+            height: 1194px;
+            margin-top: -200px;
+            position: absolute;
+            background-image: url('public/img/header/ficury_background.png');
+            z-index: -1;
+        }
+
         .ficury__playbox {
+            z-index: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-grow: 1;
+        }
+
+        .ficury__title {
+            z-index: 1;
         }
 
         .ficury__title,
@@ -360,6 +373,7 @@
 
         .product-description {
             border-bottom: rgb(191, 191, 191) 1px dashed;
+            background-color: white;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -1227,6 +1241,7 @@
             </footer>
         </section>
         <section class="ficury">
+            <div class="ficury__background" data-rellax-speed="-5"></div>
             <h1 class="ficury__title">Fíčury Boboboxu</h1>
             <div class="ficury__playbox">
                 <a href="" class="ficury__playbox__play">
@@ -1512,5 +1527,9 @@
     <footer class="page-footer">
         <a href="">Obchodní podmínky</a> a <a href="">Reklamační řád</a>
     </footer>
+    <script src="public/js/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax('.ficury__background');
+    </script>
   </body>
 </html>
