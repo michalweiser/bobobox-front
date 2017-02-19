@@ -182,6 +182,10 @@ section {
     .rozvijime__grass {
         display: none;
     }
+
+    .rozvijime__main {
+        margin-bottom: 40px;
+    }
 }
 
 .button-objednat {
@@ -198,7 +202,6 @@ section {
     width: 100%;
     justify-content: space-around;
     align-items: center;
-    height: 180px;
 }
 
 .rozvijime__header__image {
@@ -313,7 +316,7 @@ section {
 }
 
 .rozvijime__grass__image.paint {
-    right: 22%;
+    right: 21%;
     bottom: 70px;
 }
 
