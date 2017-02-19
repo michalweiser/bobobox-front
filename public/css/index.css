@@ -325,6 +325,8 @@ section {
     position: absolute;
     background-image: url('../img/header/box_b.jpg');
     background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     z-index: -1;
 }
 
@@ -361,7 +363,7 @@ section {
     border-color: transparent;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .product-description {
         flex-direction: column;
         height: 900px;
@@ -409,6 +411,24 @@ section {
 
 .usetrite .text-box {
     margin-right: 120px;
+}
+
+@media (max-width: 1400px) {
+    .kreativni .text-box {
+        margin-left: 100px;
+    }
+
+    .vkazdem .text-box {
+        margin-right: 70px;
+    }
+
+    .navody .text-box {
+        margin-left: 30px;
+    }
+
+    .usetrite .text-box {
+        margin-right: 60px;
+    }
 }
 
 .product-image {
@@ -467,7 +487,7 @@ section {
     justify-content: center;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .jakto {
         height: auto;
     }
