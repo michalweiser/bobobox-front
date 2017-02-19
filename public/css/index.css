@@ -364,14 +364,21 @@ section {
 
 .ficury__background {
     width: 100%;
+    min-width: 600px;
     height: 1194px;
     margin-top: -300px;
     position: absolute;
-    background-image: url('../img/header/box_b.jpg');
+    background-image: url('../img/header/box_background.jpg');
     background-position: center center;
     background-size: 100% auto;
     background-repeat: no-repeat;
     z-index: -1;
+}
+
+@media (max-width: 1000px) {
+    .ficury__background {
+        background-size: 1000px auto;
+    }
 }
 
 .ficury__playbox {
